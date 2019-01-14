@@ -2,7 +2,7 @@ import {HttpClient} from '@angular/common/http';
 
 export class BaseApi {
 
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl = 'http://91.240.85.73:3000';
 
   constructor(
     public http: HttpClient
