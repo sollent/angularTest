@@ -1,0 +1,51 @@
+
+> sollento-admin-service@0.0.0 dev /home/sollent/Desktop/sollento/angularTest/sollentoAdminService
+> concurrently --kill-others "npm run start" "npm run server"
+
+[0] 
+[0] > sollento-admin-service@0.0.0 start /home/sollent/Desktop/sollento/angularTest/sollentoAdminService
+[0] > ng serve
+[0] 
+[1] 
+[1] > sollento-admin-service@0.0.0 server /home/sollent/Desktop/sollento/angularTest/sollentoAdminService
+[1] > json-server --watch db.json --port 3000
+[1] 
+[1] 
+[1]   \{^_^}/ hi!
+[1] 
+[1]   Loading db.json
+[1]   Done
+[1] 
+[1]   Resources
+[1]   http://localhost:3000/users
+[1]   http://localhost:3000/bill
+[1]   http://localhost:3000/categories
+[1]   http://localhost:3000/events
+[1] 
+[1]   Home
+[1]   http://localhost:3000
+[1] 
+[1]   Type s + enter at any time to create a snapshot of the database
+[1]   Watching...
+[1] 
+[0] ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+[1] [0mGET /users?email=sollent@mail.com [36m304 [0m23.919 ms - -[0m
+[1] [0mGET /users?email=sollent@mail.com [36m304 [0m3.237 ms - -[0m
+[1] [0mGET /users?email=sollent@mail.com [36m304 [0m3.032 ms - -[0m
+[1] [0mGET /bill [36m304 [0m3.953 ms - -[0m
+[0] 
+[0] Date: 2019-01-14T16:06:01.710Z
+[0] Hash: 5a9f7b7b21a4774749ff
+[0] Time: 10944ms
+[0] chunk {main} main.js, main.js.map (main) 105 kB [initial] [rendered]
+[0] chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 223 kB [initial] [rendered]
+[0] chunk {runtime} runtime.js, runtime.js.map (runtime) 6.08 kB [entry] [rendered]
+[0] chunk {styles} styles.js, styles.js.map (styles) 852 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 4.05 MB [initial] [rendered]
+[0] [34mℹ[39m [90m｢wdm｣[39m: Compiled successfully.
+[1] [0mGET /users?email=sollent@mail.com [36m304 [0m5.600 ms - -[0m
+[1] [0mGET /users?email=sollent@mail.com [36m304 [0m5.690 ms - -[0m
+[1] [0mGET /bill [36m304 [0m3.571 ms - -[0m
+[1] [0mGET /bill [36m304 [0m6.003 ms - -[0m
+[1] [0mGET /bill [36m304 [0m4.680 ms - -[0m
+[1] [0mGET /bill [36m304 [0m4.811 ms - -[0m
