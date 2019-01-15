@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'sollento-sidebar',
@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  @Input() sidebarIsOpen: boolean;
+  @Output() onSidebarClose = new EventEmitter();
+
+  constructor() {
+  }
+
+  closeSidebar() {
+    this.onSidebarClose.emit();
+  }
 
   ngOnInit() {
   }

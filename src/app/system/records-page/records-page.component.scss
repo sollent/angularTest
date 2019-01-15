@@ -1,0 +1,16 @@
+.btn.float-right {
+  float: right;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .btn.float-right {
+    margin-top: 10px;
+    float: none;
+  }
+}
+
+.custom-icon {
+  margin-right: 4px;
+}
+

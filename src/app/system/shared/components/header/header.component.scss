@@ -1,0 +1,28 @@
+.menu-button {
+  .btn {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .menu-button {
+    .btn {
+      display: block;
+      margin: 5px 0 0 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-button {
+    .btn {
+      background: transparent;
+      border: navajowhite;
+      margin: 5px 0 0 10px;
+      i {
+        font-size: 1.7rem;
+        color: #52bcd3;
+      }
+    }
+  }
+}

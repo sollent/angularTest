@@ -1,4 +1,7 @@
-<aside class="sidebar">
+<aside
+  class="sidebar"
+  [ngClass]="{ 'mobile-sidebar': sidebarIsOpen }"
+>
   <div class="sidebar-container">
     <div class="sidebar-header">
       <div class="brand">
@@ -11,20 +14,21 @@
         </div>
         Бухгалтерия
       </div>
+      <i class="fa fa-times close-icon" aria-hidden="true" (click)="closeSidebar()"></i>
     </div>
     <nav class="menu">
       <ul class="nav metismenu">
         <li routerLinkActive="active">
-          <a routerLink="bill"> <i class="fa fa-building-o"></i> Счет </a>
+          <a routerLink="bill" (click)="closeSidebar()"> <i class="fa fa-building-o"></i> Счет </a>
         </li>
         <li routerLinkActive="active">
-          <a routerLink="history"> <i class="fa fa-flash"></i> История </a>
+          <a routerLink="history" (click)="closeSidebar()"><i class="fa fa-flash"></i> История </a>
         </li>
         <li routerLinkActive="active">
-          <a routerLink="planning"> <i class="fa fa-archive"></i> Планирование </a>
+          <a routerLink="planning" (click)="closeSidebar()"><i class="fa fa-archive"></i> Планирование </a>
         </li>
         <li routerLinkActive="active">
-          <a routerLink="records"> <i class="fa fa-plus-square"></i> Запись </a>
+          <a routerLink="records" (click)="closeSidebar()"> <i class="fa fa-plus-square"></i> Запись </a>
         </li>
       </ul>
     </nav>

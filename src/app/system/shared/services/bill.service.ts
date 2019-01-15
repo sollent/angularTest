@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {BaseApi} from '../../../shared/core/base-api';
+import {Bill} from '../models/bill.model';
+import {Observable} from 'rxjs';
 
 @Injectable()
 export class BillService extends BaseApi {
@@ -15,6 +17,10 @@ export class BillService extends BaseApi {
 
   getBill() {
     return this.get('/bill');
+  }
+
+  updateBill(bill: Bill): Observable<any> {
+    return this.put('/bill', bill);
   }
 
   // Request to fixer.io api service

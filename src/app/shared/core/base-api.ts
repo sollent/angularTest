@@ -20,4 +20,12 @@ export class BaseApi {
    return this.http.post(this.getBaseUrl(url), data);
   }
 
+  protected put(url: string, data: any) {
+    return this.http.put(this.getBaseUrl(url), data);
+  }
+
+  protected delete(url: string) {
+    return this.http.delete(this.getBaseUrl(url));
+  }
+
 }

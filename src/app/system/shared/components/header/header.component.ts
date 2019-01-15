@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {User} from '../../../../shared/models/user.model';
 import {Router} from '@angular/router';
 import {AuthService} from '../../../../shared/services/auth.service';
@@ -13,6 +13,8 @@ export class HeaderComponent implements OnInit {
   date: Date = new Date();
   user: User;
 
+  @Output() onSidebarOpen = new EventEmitter();
+
   constructor(
     private authService: AuthService,
     private router: Router
@@ -25,6 +27,10 @@ export class HeaderComponent implements OnInit {
   onLogout() {
     this.authService.logout();
     this.router.navigate(['/login']);
+  }
+
+  changeSidebarState() {
+    this.onSidebarOpen.emit();
   }
 
 }

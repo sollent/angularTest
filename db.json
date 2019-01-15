@@ -42,24 +42,19 @@
     }
   ],
   "bill": {
-    "value": 100000,
+    "value": 99800,
     "currency": "RUB"
   },
   "categories": [
     {
-      "name": "Дом",
-      "capacity": 15000,
-      "id": 1
+      "name": "Ребенок",
+      "capacity": 250,
+      "id": 3
     },
     {
-      "name": "Еда",
-      "capacity": 10000,
-      "id": 2
-    },
-    {
-      "id": 3,
-      "name": "Машина",
-      "capacity": 7000
+      "name": "Новая категория",
+      "capacity": 10,
+      "id": 4
     }
   ],
   "events": [
@@ -102,6 +97,14 @@
       "date": "10.06.2017 14:01:58",
       "id": 5,
       "description": "Заправка + проход ТО"
+    },
+    {
+      "type": "outcome",
+      "amount": 200,
+      "category": "3",
+      "date": "1/15/2019, 9:58:17 PM",
+      "description": "dasdasdasdsadsadas",
+      "id": 6
     }
   ]
 }

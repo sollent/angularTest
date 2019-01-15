@@ -1,7 +1,12 @@
 <div class="main-wrapper">
   <div class="app">
-    <sollento-header></sollento-header>
-    <sollento-sidebar></sollento-sidebar>
+    <sollento-header
+      (onSidebarOpen)="openSidebar()"
+    ></sollento-header>
+    <sollento-sidebar
+      (onSidebarClose)="closeSidebar()"
+      [sidebarIsOpen]="sidebarIsOpen"
+    ></sollento-sidebar>
     <!--CONTENT-->
     <article class="content dashboard-page">
       <router-outlet></router-outlet>
