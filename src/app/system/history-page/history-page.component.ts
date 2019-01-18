@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CategoryService} from '../shared/services/category.service';
+import {Category} from '../shared/models/category.model';
 
 @Component({
   selector: 'sollento-history-page',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoryPageComponent implements OnInit {
 
-  constructor() { }
+  isLoaded = false;
+
+  categories = [];
+
+  constructor(
+    private categoryService: CategoryService
+  ) {
+  }
 
   ngOnInit() {
+    this.categoryService.getCategories()
+      .subscribe((categories: Category[]) => {
+        console.log(categories);
+        for (let i = 0; i < categories.length; i++) {
+          this.categories.push({
+            name: categories[i]['name'],
+            value: categories[i]['capacity']
+          });
+        }
+        this.isLoaded = true;
+      });
   }
 
 }

@@ -1,0 +1,36 @@
+<section class="section">
+  <div class="row">
+    <div class="col-md-12">
+          <section class="example" style="text-align: center;">
+            <div *ngIf="activeLink === 'pieChart'">
+              <ngx-charts-pie-chart
+                [view]="pieChartView"
+                [results]="data"
+                [legend]="legends"
+                [labels]="true"
+                [doughnut]="true"
+                [gradient]="false"
+                >
+              </ngx-charts-pie-chart>
+            </div>
+            <div *ngIf="activeLink === 'verticalChart'">
+              <ngx-charts-bar-vertical
+                [view]="verticalCHartView"
+                [results]="data"
+                [gradient]="false"
+                [xAxis]="verticalCHartXAxis"
+                [yAxis]="true"
+                [legend]="legends"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                [xAxisLabel]="'Категории'"
+                [yAxisLabel]="'Расходы'"
+                >
+              </ngx-charts-bar-vertical>
+            </div>
+          </section>
+      </div>
+  </div>
+  <button class="btn btn-primary" [ngClass]="{ 'active': activeLink === 'pieChart' }" (click)="changeActiveLink('pieChart')">Круглый график</button>
+  <button class="btn btn-primary" [ngClass]="{ 'active': activeLink === 'verticalChart' }" (click)="changeActiveLink('verticalChart')">Вертикальный график</button>
+</section>

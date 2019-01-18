@@ -21,6 +21,11 @@ import { EditCategoryComponent } from './records-page/edit-category/edit-categor
 import {CategoryService} from './shared/services/category.service';
 import { DeleteCategoryComponent } from './records-page/delete-category/delete-category.component';
 import {EventService} from './shared/services/event.service';
+import { HistoryChartComponent } from './history-page/history-chart/history-chart.component';
+import { HistoryEventsComponent } from './history-page/history-events/history-events.component';
+import { HistoryDetailComponent } from './history-page/history-detail/history-detail.component';
+import { HistoryFilterComponent } from './history-page/history-filter/history-filter.component';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -37,13 +42,18 @@ import {EventService} from './shared/services/event.service';
     AddEventComponent,
     AddCategoryComponent,
     EditCategoryComponent,
-    DeleteCategoryComponent
+    DeleteCategoryComponent,
+    HistoryChartComponent,
+    HistoryEventsComponent,
+    HistoryDetailComponent,
+    HistoryFilterComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     SystemRoutingModule,
-    CKEditorModule
+    CKEditorModule,
+    NgxChartsModule
   ],
   providers: [BillService, CategoryService, EventService]
 })
