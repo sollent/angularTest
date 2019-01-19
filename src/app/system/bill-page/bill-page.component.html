@@ -10,7 +10,7 @@
 </div>
 <section class="section">
   <div class="row" *ngIf="!isLoaded">
-   Loading...
+   <sollento-loader></sollento-loader>
   </div>
   <div class="row" *ngIf="isLoaded">
     <sollento-bill-card [bill]="bill" [currency]="currency"></sollento-bill-card>

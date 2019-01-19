@@ -8,23 +8,23 @@
           </div>
           <div class="form-inline pull-right m-r-2">
             <div class="form-group">
-              <input type="email" class="form-control" placeholder="Поиск...">
+              <input type="email" class="form-control" [(ngModel)]="inputValue" [placeholder]="currentFieldPlaceholder">
             </div>
-            <div class="btn-group">
+            <div class="btn-group" sollentoHeaderDropdown>
               <button type="button" class="btn btn-secondary dropdown-toggle " sollentoHeaderDropdown>
                 Параметр
               </button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" (click)="onChangeFilterField('amount')">Сумма</a>
+                <a class="dropdown-item" (click)="onChangeFilterField('date')">Дата</a>
+                <a class="dropdown-item" (click)="onChangeFilterField('categoryName')">Категория</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
+                <a class="dropdown-item" (click)="onChangeFilterField('type')">Тип</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="card-block">
+        <div class="card-block horizontal-scroll-except-first-column">
           <table class="table table-striped">
             <thead>
             <tr>
@@ -37,28 +37,16 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>44 444</td>
-              <td>12.12.2017</td>
-              <td>Товары</td>
+            <tr *ngFor="let e of events | sollentoFilter:inputValue:currentSearchField; let idx = index">
+              <th scope="row">{{ idx + 1 }}</th>
+              <td>{{ e.amount }}</td>
+              <td>{{ e.date | date }}</td>
+              <td>{{ e.categoryName }}</td>
               <td>
-                <span class="label label-danger">Расход</span>
+                <span [ngClass]="getClasses(e.type)">{{ types[e.type] }}</span>
               </td>
               <td class="text-lg-center">
-                <a href="#" class="btn btn-primary-outline">Открыть</a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>33 333</td>
-              <td>12.12.2017</td>
-              <td>Отдых</td>
-              <td>
-                <span class="label label-success">Доход</span>
-              </td>
-              <td class="text-lg-center">
-                <a href="#" class="btn btn-primary-outline">Открыть</a>
+                <a [routerLink]="e.id" class="btn btn-primary-outline">Открыть</a>
               </td>
             </tr>
             </tbody>

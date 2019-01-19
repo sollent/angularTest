@@ -4,7 +4,8 @@ export class SollentoEvent {
     public amount: number,
     public category: number,
     public date: string,
-    public description: string
+    public description: string,
+    public categoryName?: string
 ) {
   }
 }

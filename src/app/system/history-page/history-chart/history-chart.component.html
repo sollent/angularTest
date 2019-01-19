@@ -28,9 +28,17 @@
                 >
               </ngx-charts-bar-vertical>
             </div>
+            <div *ngIf="activeLink === 'advancedPieChart'">
+              <ngx-charts-advanced-pie-chart
+                [view]="advancedPieChartView"
+                [results]="data"
+                >
+              </ngx-charts-advanced-pie-chart>
+            </div>
           </section>
       </div>
   </div>
   <button class="btn btn-primary" [ngClass]="{ 'active': activeLink === 'pieChart' }" (click)="changeActiveLink('pieChart')">Круглый график</button>
   <button class="btn btn-primary" [ngClass]="{ 'active': activeLink === 'verticalChart' }" (click)="changeActiveLink('verticalChart')">Вертикальный график</button>
+  <button class="btn btn-primary" [ngClass]="{ 'active': activeLink === 'advancedPieChart' }" (click)="changeActiveLink('advancedPieChart')">Расширенный график</button>
 </section>

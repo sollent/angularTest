@@ -6,13 +6,15 @@ import {HistoryPageComponent} from './history-page/history-page.component';
 import {PlanningPageComponent} from './planning-page/planning-page.component';
 import {RecordsPageComponent} from './records-page/records-page.component';
 import {AuthGuard} from '../shared/services/auth.guard';
+import {HistoryDetailComponent} from './history-page/history-detail/history-detail.component';
 
 const routes: Routes = [
-  { path: 'system', component: SystemComponent, canActivate: [AuthGuard], children: [
+  { path: '', component: SystemComponent, canActivate: [AuthGuard], children: [
       { path: 'bill', component: BillPageComponent },
       { path: 'history', component: HistoryPageComponent },
       { path: 'planning', component: PlanningPageComponent },
-      { path: 'records', component: RecordsPageComponent }
+      { path: 'records', component: RecordsPageComponent },
+      { path: 'history/:id', component: HistoryDetailComponent }
     ]}
 ];
 

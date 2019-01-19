@@ -74,7 +74,9 @@ export class AddEventComponent implements OnInit {
               currency: bill.currency
             }))
           ).subscribe((data) => {
-            console.log(data);
+            if (data) {
+              this.showMessage('success', 'Событие успешно добавлено.');
+            }
         });
 
       });

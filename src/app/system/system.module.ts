@@ -26,6 +26,7 @@ import { HistoryEventsComponent } from './history-page/history-events/history-ev
 import { HistoryDetailComponent } from './history-page/history-detail/history-detail.component';
 import { HistoryFilterComponent } from './history-page/history-filter/history-filter.component';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {FilterPipe} from './shared/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
     HistoryChartComponent,
     HistoryEventsComponent,
     HistoryDetailComponent,
-    HistoryFilterComponent
+    HistoryFilterComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,

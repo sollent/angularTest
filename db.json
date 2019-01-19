@@ -1,110 +1,68 @@
 {
   "users": [
     {
-      "id": 1,
-      "email": "wfm@mail.ru",
-      "password": "12345678",
-      "name": "Администратор"
-    },
-    {
-      "id": 2,
       "email": "sollent@mail.com",
       "password": "Pahan1998",
-      "name": "Администратор 2"
-    },
-    {
-      "email": "pavel.laikov98@gmail.com",
-      "password": "Pahan1998",
-      "name": "sollent",
+      "name": "Pavel",
       "agree": true,
-      "id": 3
-    },
-    {
-      "email": "pavluk@mail.com",
-      "password": "pavluk",
-      "name": "pavluk",
-      "agree": true,
-      "id": 4
-    },
-    {
-      "email": "pashka@mail.com",
-      "password": "pashka",
-      "name": "pashka",
-      "agree": true,
-      "id": 5
-    },
-    {
-      "email": "maks@mail.com",
-      "password": "maksik",
-      "name": "maksik",
-      "agree": true,
-      "id": 6
+      "id": 1
     }
   ],
   "bill": {
-    "value": 99800,
+    "value": 103405,
     "currency": "RUB"
   },
   "categories": [
     {
-      "name": "Ребенок",
-      "capacity": 250,
+      "name": "Работа",
+      "capacity": 100,
+      "id": 1
+    },
+    {
+      "name": "Учеба",
+      "capacity": 180,
+      "id": 2
+    },
+    {
+      "name": "Девушка",
+      "capacity": 110,
       "id": 3
     },
     {
-      "name": "Новая категория",
-      "capacity": 10,
+      "name": "Семья",
+      "capacity": 200,
       "id": 4
+    },
+    {
+      "name": "Jetta 2",
+      "capacity": 100,
+      "id": 5
     }
   ],
   "events": [
     {
-      "id": 1,
       "type": "income",
-      "amount": 1250,
+      "amount": 85,
       "category": 2,
-      "date": "12.06.2017 19:49:02",
-      "description": "Подарили еду в гостях"
-    },
-    {
-      "id": 2,
-      "type": "outcome",
-      "amount": 1300,
-      "category": 1,
-      "date": "13.06.2017 19:49:02",
-      "description": "Купил посудомоечную машину"
+      "date": "1/18/2019, 9:18:54 PM",
+      "description": "Стипендия",
+      "id": 1
     },
     {
       "type": "income",
-      "amount": 1480,
+      "amount": 2500,
+      "category": "1",
+      "date": "1/18/2019, 9:21:01 PM",
+      "description": "Зарплата",
+      "id": 2
+    },
+    {
+      "type": "outcome",
+      "amount": 480,
       "category": 2,
-      "date": "17.06.2017 14:00:48",
-      "id": 3,
-      "description": "Поход в окей с баллами. Бесплатная еда"
-    },
-    {
-      "type": "outcome",
-      "amount": 2470,
-      "category": 2,
-      "date": "17.06.2017 14:00:58",
-      "id": 4,
-      "description": "Закупка на неделю"
-    },
-    {
-      "type": "outcome",
-      "amount": 4000,
-      "category": 3,
-      "date": "10.06.2017 14:01:58",
-      "id": 5,
-      "description": "Заправка + проход ТО"
-    },
-    {
-      "type": "outcome",
-      "amount": 200,
-      "category": "3",
-      "date": "1/15/2019, 9:58:17 PM",
-      "description": "dasdasdasdsadsadas",
-      "id": 6
+      "date": "1/18/2019, 9:23:13 PM",
+      "description": "Оплата учебы",
+      "id": 3
     }
   ]
 }

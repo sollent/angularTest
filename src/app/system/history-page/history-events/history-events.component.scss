@@ -1,0 +1,8 @@
+.horizontal-scroll-except-first-column {
+  table {
+    table-layout: fixed;
+    display: block;
+    overflow: scroll;
+    min-width: 100%;
+  }
+}

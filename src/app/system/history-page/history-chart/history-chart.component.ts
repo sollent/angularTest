@@ -7,11 +7,12 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HistoryChartComponent implements OnInit {
 
-  @Input('categories') data;
+  @Input('chartData') data;
   activeLink = 'pieChart';
 
   pieChartView = [600, 390];
   verticalCHartView = [700, 400];
+  advancedPieChartView = [700, 400];
   verticalCHartXAxis = true;
   legends = true;
 
@@ -23,6 +24,14 @@ export class HistoryChartComponent implements OnInit {
     }
     if (window.screen.width < 520) {
       this.legends = false;
+    }
+    if (window.screen.width < 400) {
+      this.pieChartView = [340, 221];
+      this.verticalCHartView = [320, 182];
+    }
+    if (window.screen.width < 350) {
+      this.pieChartView = [310, 201];
+      this.verticalCHartView = [300, 170];
     }
   }
 

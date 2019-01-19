@@ -1,3 +1,37 @@
-<p>
-  history-detail works!
-</p>
+<div class="text-center" *ngIf="!isLoaded">
+  <sollento-loader></sollento-loader>
+</div>
+
+<div *ngIf="isLoaded">
+  <div class="title-block">
+    <h3 class="title">
+      <a (click)="goBack()"><i class="fa fa-arrow-left"></i></a>
+      Страница записи № {{ event.id }}
+      <span class="sparkline bar"></span>
+    </h3>
+  </div>
+  <section class="section">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <div [ngClass]="getClasses()">
+          <div class="card-header">
+            <div class="header-block">
+              <p class="title" *ngIf="event.type === 'income'; else elseTypeTemplate">{{ types['income'] }}</p>
+              <ng-template #elseTypeTemplate>
+                <p class="title">{{ types['outcome'] }}</p>
+              </ng-template>
+            </div>
+          </div>
+          <div class="card-block">
+            <ul>
+              <li>Сумма: <strong>{{ event.amount | number }}</strong></li>
+              <li>Категория: <strong>{{ event.categoryName }}</strong></li>
+              <li>Описание: {{ event.description }}</li>
+            </ul>
+          </div>
+          <div class="card-footer">{{ event.date | date }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {BillService} from '../shared/services/bill.service';
 import {combineLatest, Subscription} from 'rxjs';
 import {Bill} from '../shared/models/bill.model';
+import {delay} from 'rxjs/operators';
 
 @Component({
   selector: 'sollento-bill-page',
@@ -26,6 +27,8 @@ export class BillPageComponent implements OnInit, OnDestroy {
     this.subscribe1 = combineLatest(
       this.billService.getBill(),
       this.billService.getCurrency()
+    ).pipe(
+      delay(200)
     ).subscribe(
       (data) => {
         this.isLoaded = true;

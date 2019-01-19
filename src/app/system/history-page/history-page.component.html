@@ -5,12 +5,18 @@
 </div>
 
 <div *ngIf="!isLoaded" class="text-center">
-  Loading...
+  <sollento-loader></sollento-loader>
 </div>
 
 <div *ngIf="isLoaded">
-  <sollento-history-chart [categories]="categories"></sollento-history-chart>
-  <sollento-history-events></sollento-history-events>
+  <sollento-history-chart
+    [chartData]="chartData"
+
+  ></sollento-history-chart>
+  <sollento-history-events
+    [events]="events"
+    [categories]="categories"
+  ></sollento-history-events>
   <sollento-history-filter></sollento-history-filter>
 </div>
 
